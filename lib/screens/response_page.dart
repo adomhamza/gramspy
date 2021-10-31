@@ -64,6 +64,12 @@ class ResponsePage extends StatelessWidget {
                       fullname: objectResult.user!.fullName,
                       bio: objectResult.user!.biography,
                     ),
+                    const SizedBox(
+                      height: 5.0,
+                    ),
+                    PostGridView(
+                      graphql: objectResult,
+                    ),
                   ],
                 ),
               ],
