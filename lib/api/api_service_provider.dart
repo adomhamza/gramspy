@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import '../route/routes.dart';
 import '../components/dialog.dart';
 import '../models/model.dart';
 
@@ -28,6 +29,7 @@ class APIService with ChangeNotifier {
       if (response.statusCode == 200) {
         final obj = json.decode(response.body);
         userRequestModel = UserRequestModel.fromJson(obj);
+        Navigator.of(context).pushReplacementNamed(RouteManager.responsePage);
       } else {
         showAlertDialog(
           title: 'Ghost Alert!!',
