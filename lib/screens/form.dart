@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../gram_spy_theme.dart';
 
-class Form extends StatefulWidget {
-  const Form({Key? key}) : super(key: key);
+class FormPage extends StatefulWidget {
+  const FormPage({Key? key}) : super(key: key);
 
   @override
-  State<Form> createState() => _FormState();
+  State<FormPage> createState() => _FormPageState();
 }
 
-class _FormState extends State<Form> {
+class _FormPageState extends State<FormPage> {
   final _usernamecontroller = TextEditingController();
   String? get emptyText {
     final text = _usernamecontroller.value.text;
