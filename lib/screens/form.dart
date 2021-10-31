@@ -42,40 +42,35 @@ class _FormPageState extends State<FormPage> {
                   ),
                   SizedBox(
                       height: 100,
-                      child: ListView(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            margin: const EdgeInsets.only(
-                              left: 30.0,
-                              right: 30.0,
-                            ),
-                            alignment: Alignment.center,
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      errorText: emptyText,
-                                      errorStyle:
-                                          GramSpyTheme.lightTextTheme.bodyText1,
-                                    ),
-                                    autofocus: true,
-                                    textAlign: TextAlign.center,
-                                    style:
-                                        GramSpyTheme.lightTextTheme.headline3,
-                                    controller: _usernamecontroller,
-                                  ),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: const EdgeInsets.only(
+                          left: 30.0,
+                          right: 30.0,
+                        ),
+                        alignment: Alignment.center,
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  errorText: emptyText,
+                                  errorStyle:
+                                      GramSpyTheme.lightTextTheme.bodyText1,
                                 ),
-                              ],
+                                autofocus: true,
+                                textAlign: TextAlign.center,
+                                style: GramSpyTheme.lightTextTheme.headline3,
+                                controller: _usernamecontroller,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.only(
-                        left: 30.0, right: 30.0, top: 30.0),
+                        left: 30.0, right: 30.0, top: 80.0),
                     alignment: Alignment.center,
                     child: Row(
                       children: [
