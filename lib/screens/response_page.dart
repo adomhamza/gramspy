@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../components/components.dart';
 import '../api/api_service_provider.dart';
 import '../route/routes.dart';
@@ -58,6 +59,10 @@ class ResponsePage extends StatelessWidget {
                               objectResult.user!.edgeFollow!.count.toString(),
                         ),
                       ],
+                    ),
+                    UserBio(
+                      fullname: objectResult.user!.fullName,
+                      bio: objectResult.user!.biography,
                     ),
                   ],
                 ),
