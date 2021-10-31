@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../api/api_service_provider.dart';
 
 import '../gram_spy_theme.dart';
 
@@ -83,11 +85,18 @@ class _FormPageState extends State<FormPage> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0)),
                             ),
-                            onPressed: emptyText == null ? () {} : null,
-                            child: const Text(
-                              'SEARCH',
+                            onPressed: emptyText == null
+                                ? () {
+                                    context.read<APIService>().userRequest(
+                                        context, _usernamecontroller.text);
+                                    context.read<APIService>().btnLabel =
+                                        'SPYING ON USER....';
+                                  }
+                                : null,
+                            child: Text(
+                              context.watch<APIService>().btnLabel,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w900,
                                   fontSize: 15.0),
