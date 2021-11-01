@@ -19,6 +19,7 @@ class GramSpy extends StatelessWidget {
       create: (context) => APIService(),
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'GramSpy',
           theme: theme,
           initialRoute: RouteManager.homePage,
