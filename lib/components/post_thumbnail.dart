@@ -14,50 +14,55 @@ class PostThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.network(
-              networkImage,
-              width: 200,
-              height: 200,
-              fit: BoxFit.cover,
+    return Card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.network(
+                networkImage,
+                width: 200,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Column(
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  likesCount,
-                  style: GramSpyTheme.lightTextTheme.bodyText1,
+                Column(
+                  children: [
+                    Text(
+                      likesCount,
+                      style: GramSpyTheme.lightTextTheme.bodyText1,
+                    ),
+                    const Text(
+                      'Likes',
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
-                const Text(
-                  'Likes',
-                  textAlign: TextAlign.center,
+                Column(
+                  children: [
+                    Text(
+                      commentCount,
+                      style: GramSpyTheme.lightTextTheme.bodyText1,
+                    ),
+                    const Text(
+                      'Comments',
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ],
             ),
-            Column(
-              children: [
-                Text(
-                  commentCount,
-                  style: GramSpyTheme.lightTextTheme.bodyText1,
-                ),
-                const Text(
-                  'Comments',
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }
