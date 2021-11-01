@@ -2,11 +2,11 @@
 
 
 ## About
-A app that fetches and displays user data from InstaGram.\n
--Authentication is not required.\n
--A valid username is required to fetch data.\n
--Data displayed include Profile Picture, Username, Full Name, Biography, Posts and Count of Likes, Followings and Followers.\n
--Only twelve (12) recent Posts are fetched. 
+A app that fetches and displays user data from InstaGram.
+- Authentication is not required.
+- A valid username is required to fetch data.
+- Data displayed include Profile Picture, Username, Full Name, Biography, Posts and Count of Likes, Followings and Followers.
+- Only twelve (12) recent Posts are fetched. 
 
 
 ## Images
