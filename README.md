@@ -1,6 +1,10 @@
 # gramspy
 
-A new Flutter project.
+GramSpy is mobibile app that takes .
+
+
+#Images
+![UI 1](https://github.com/adomhamza/gramspy/blob/main/UI%20Images/GramSpy%20UI%201.png)
 
 ## Getting Started
 
