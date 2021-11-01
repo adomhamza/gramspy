@@ -3,8 +3,11 @@
 GramSpy is mobibile app that takes .
 
 
-#Images
+## Images
+
 ![UI 1](https://github.com/adomhamza/gramspy/blob/main/UI%20Images/GramSpy%20UI%201.png)
+
+![UI 2](https://github.com/adomhamza/gramspy/blob/main/UI%20Images/GramSpy%20UI%202.png)
 
 ## Getting Started
 
